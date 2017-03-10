@@ -1,0 +1,30 @@
+{
+    "log": { 
+        "type": "console" 
+    },
+    
+    "cache": {
+        "type": "memory"
+    },
+
+    "counters": {
+        "type": "log"
+    },
+    
+    "db": {
+        "type": "file",
+        "path": "./dummies.json",
+        "data": [] 
+    },
+    
+    "deps": {
+        "name": "dummy",
+        "type": "rest"
+    },
+    
+    "api": [
+        {
+            "type": "rest"
+        }
+    ]
+}

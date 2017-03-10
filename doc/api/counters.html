@@ -1,0 +1,542 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/counters"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractCounters">type AbstractCounters</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractCounters">func NewAbstractCounters(id string, config *runtime.DynamicMap) *AbstractCounters</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.BeginTiming">func (c *AbstractCounters) BeginTiming(name string) *runtime.Timing</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Close">func (c *AbstractCounters) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Dump">func (c *AbstractCounters) Dump() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Get">func (c *AbstractCounters) Get(name string, typ int) *runtime.Counter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.GetAll">func (c *AbstractCounters) GetAll() []*runtime.Counter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Increment">func (c *AbstractCounters) Increment(name string, value int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.IncrementOne">func (c *AbstractCounters) IncrementOne(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Last">func (c *AbstractCounters) Last(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Open">func (c *AbstractCounters) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Reset">func (c *AbstractCounters) Reset(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.ResetAll">func (c *AbstractCounters) ResetAll()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.SetSave">func (c *AbstractCounters) SetSave(save func(counters []*runtime.Counter) error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.SetTiming">func (c *AbstractCounters) SetTiming(name string, elapsed float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Stats">func (c *AbstractCounters) Stats(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.Timestamp">func (c *AbstractCounters) Timestamp(name string, time time.Time)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractCounters.TimestampNow">func (c *AbstractCounters) TimestampNow(name string)</a></dd>
+				
+			
+				
+				<dd><a href="#LogCounters">type LogCounters</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewLogCounters">func NewLogCounters(config *runtime.DynamicMap) *LogCounters</a></dd>
+				
+				
+			
+				
+				<dd><a href="#NullCounters">type NullCounters</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewNullCounters">func NewNullCounters(config *runtime.DynamicMap) *NullCounters</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.BeginTiming">func (c *NullCounters) BeginTiming(name string) *runtime.Timing</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Dump">func (c *NullCounters) Dump() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Get">func (c *NullCounters) Get(name string, typ int) *runtime.Counter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.GetAll">func (c *NullCounters) GetAll() []*runtime.Counter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Increment">func (c *NullCounters) Increment(name string, value int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.IncrementOne">func (c *NullCounters) IncrementOne(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Last">func (c *NullCounters) Last(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Reset">func (c *NullCounters) Reset(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.ResetAll">func (c *NullCounters) ResetAll()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Stats">func (c *NullCounters) Stats(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.Timestamp">func (c *NullCounters) Timestamp(name string, time time.Time)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCounters.TimestampNow">func (c *NullCounters) TimestampNow(name string)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/counters/AbstractCounters.go">AbstractCounters.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/counters/LogCounters.go">LogCounters.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/counters/NullCounters.go">NullCounters.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractCounters">type <a href="/src/target/AbstractCounters.go?s=239:514#L3">AbstractCounters</a></h2>
+			<pre>type AbstractCounters struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractCounters">func <a href="/src/target/AbstractCounters.go?s=518:599#L14">NewAbstractCounters</a></h3>
+				<pre>func NewAbstractCounters(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractCounters">AbstractCounters</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractCounters.BeginTiming">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4172:4239#L151">BeginTiming</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) BeginTiming(name <a href="/pkg/builtin/#string">string</a>) *runtime.<a href="#Timing">Timing</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Close">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=1568:1608#L48">Close</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Dump">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=2290:2329#L80">Dump</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Dump() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Get">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=2673:2742#L96">Get</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Get(name <a href="/pkg/builtin/#string">string</a>, typ <a href="/pkg/builtin/#int">int</a>) *runtime.<a href="#Counter">Counter</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.GetAll">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=2446:2500#L88">GetAll</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) GetAll() []*runtime.<a href="#Counter">Counter</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Increment">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=5014:5074#L181">Increment</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Increment(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.IncrementOne">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4927:4979#L177">IncrementOne</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) IncrementOne(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Last">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4453:4512#L160">Last</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Last(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Open">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=1042:1081#L28">Open</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Reset">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=2094:2139#L71">Reset</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Reset(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.ResetAll">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=2175:2212#L75">ResetAll</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) ResetAll()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.SetSave">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=933:1013#L24">SetSave</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) SetSave(save func(counters []*runtime.<a href="#Counter">Counter</a>) <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.SetTiming">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4000:4066#L146">SetTiming</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) SetTiming(name <a href="/pkg/builtin/#string">string</a>, elapsed <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Stats">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4287:4347#L155">Stats</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Stats(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.Timestamp">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4724:4789#L170">Timestamp</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) Timestamp(name <a href="/pkg/builtin/#string">string</a>, time <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractCounters.TimestampNow">func (*AbstractCounters) <a href="/src/target/AbstractCounters.go?s=4628:4680#L166">TimestampNow</a></h3>
+				<pre>func (c *<a href="#AbstractCounters">AbstractCounters</a>) TimestampNow(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogCounters">type <a href="/src/target/LogCounters.go?s=158:208#L1">LogCounters</a></h2>
+			<pre>type LogCounters struct {
+    <a href="#AbstractCounters">AbstractCounters</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogCounters">func <a href="/src/target/LogCounters.go?s=212:272#L2">NewLogCounters</a></h3>
+				<pre>func NewLogCounters(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#LogCounters">LogCounters</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="NullCounters">type <a href="/src/target/NullCounters.go?s=106:166#L1">NullCounters</a></h2>
+			<pre>type NullCounters struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNullCounters">func <a href="/src/target/NullCounters.go?s=170:232#L2">NewNullCounters</a></h3>
+				<pre>func NewNullCounters(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#NullCounters">NullCounters</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="NullCounters.BeginTiming">func (*NullCounters) <a href="/src/target/NullCounters.go?s=764:827#L22">BeginTiming</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) BeginTiming(name <a href="/pkg/builtin/#string">string</a>) *runtime.<a href="#Timing">Timing</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Dump">func (*NullCounters) <a href="/src/target/NullCounters.go?s=430:465#L9">Dump</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Dump() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Get">func (*NullCounters) <a href="/src/target/NullCounters.go?s=587:652#L17">Get</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Get(name <a href="/pkg/builtin/#string">string</a>, typ <a href="/pkg/builtin/#int">int</a>) *runtime.<a href="#Counter">Counter</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.GetAll">func (*NullCounters) <a href="/src/target/NullCounters.go?s=492:542#L13">GetAll</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) GetAll() []*runtime.<a href="#Counter">Counter</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Increment">func (*NullCounters) <a href="/src/target/NullCounters.go?s=1163:1219#L31">Increment</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Increment(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.IncrementOne">func (*NullCounters) <a href="/src/target/NullCounters.go?s=1110:1158#L30">IncrementOne</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) IncrementOne(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Last">func (*NullCounters) <a href="/src/target/NullCounters.go?s=931:986#L27">Last</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Last(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Reset">func (*NullCounters) <a href="/src/target/NullCounters.go?s=344:385#L6">Reset</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Reset(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.ResetAll">func (*NullCounters) <a href="/src/target/NullCounters.go?s=390:423#L7">ResetAll</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) ResetAll()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Stats">func (*NullCounters) <a href="/src/target/NullCounters.go?s=870:926#L26">Stats</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Stats(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.Timestamp">func (*NullCounters) <a href="/src/target/NullCounters.go?s=1044:1105#L29">Timestamp</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) Timestamp(name <a href="/pkg/builtin/#string">string</a>, time <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCounters.TimestampNow">func (*NullCounters) <a href="/src/target/NullCounters.go?s=991:1039#L28">TimestampNow</a></h3>
+				<pre>func (c *<a href="#NullCounters">NullCounters</a>) TimestampNow(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

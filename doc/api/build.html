@@ -1,0 +1,561 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/build"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#Builder">type Builder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBuilder">func NewBuilder(types *runtime.DynamicMap, name string) *Builder</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildAddons">func (c *Builder) BuildAddons() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildAll">func (c *Builder) BuildAll() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildApi">func (c *Builder) BuildApi() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildCache">func (c *Builder) BuildCache() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildController">func (c *Builder) BuildController() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildCounters">func (c *Builder) BuildCounters() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildDataAccess">func (c *Builder) BuildDataAccess() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildDependencies">func (c *Builder) BuildDependencies() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildDiscovery">func (c *Builder) BuildDiscovery() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildInterceptors">func (c *Builder) BuildInterceptors() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.BuildLog">func (c *Builder) BuildLog() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.Config">func (c *Builder) Config() *runtime.DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.Name">func (c *Builder) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.References">func (c *Builder) References() *runtime.References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.SetReferences">func (c *Builder) SetReferences(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.Start">func (c *Builder) Start(config *runtime.DynamicMap) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.StartWithConfig">func (c *Builder) StartWithConfig(config *runtime.DynamicMap) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Builder.StartWithFile">func (c *Builder) StartWithFile(path string) error</a></dd>
+				
+			
+				
+				<dd><a href="#TLifeCycleManager">type TLifeCycleManager</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Close">func (c *TLifeCycleManager) Close(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.CloseComponents">func (c *TLifeCycleManager) CloseComponents(refs *runtime.References, components []runtime.IComponent) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Debug">func (c *TLifeCycleManager) Debug(refs *runtime.References, message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Error">func (c *TLifeCycleManager) Error(refs *runtime.References, message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Fatal">func (c *TLifeCycleManager) Fatal(refs *runtime.References, message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.ForceClose">func (c *TLifeCycleManager) ForceClose(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.ForceCloseComponents">func (c *TLifeCycleManager) ForceCloseComponents(refs *runtime.References, components []runtime.IComponent) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Info">func (c *TLifeCycleManager) Info(refs *runtime.References, message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Init">func (c *TLifeCycleManager) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.InitAndOpen">func (c *TLifeCycleManager) InitAndOpen(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.InitAndOpenComponents">func (c *TLifeCycleManager) InitAndOpenComponents(refs *runtime.References, components []runtime.IComponent) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.InitComponents">func (c *TLifeCycleManager) InitComponents(refs *runtime.References, components []runtime.IComponent) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Open">func (c *TLifeCycleManager) Open(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.OpenComponents">func (c *TLifeCycleManager) OpenComponents(refs *runtime.References, components []runtime.IComponent) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Trace">func (c *TLifeCycleManager) Trace(refs *runtime.References, message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TLifeCycleManager.Warn">func (c *TLifeCycleManager) Warn(refs *runtime.References, message ...interface{})</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/build/Builder.go">Builder.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/build/LifeCycleManager.go">LifeCycleManager.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Builder">type <a href="/src/target/Builder.go?s=333:467#L1">Builder</a></h2>
+			<pre>type Builder struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBuilder">func <a href="/src/target/Builder.go?s=471:535#L8">NewBuilder</a></h3>
+				<pre>func NewBuilder(types *runtime.<a href="#DynamicMap">DynamicMap</a>, name <a href="/pkg/builtin/#string">string</a>) *<a href="#Builder">Builder</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="Builder.BuildAddons">func (*Builder) <a href="/src/target/Builder.go?s=15432:15469#L462">BuildAddons</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildAddons() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildAll">func (*Builder) <a href="/src/target/Builder.go?s=16171:16205#L486">BuildAll</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildAll() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildApi">func (*Builder) <a href="/src/target/Builder.go?s=14264:14298#L426">BuildApi</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildApi() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildCache">func (*Builder) <a href="/src/target/Builder.go?s=10238:10274#L292">BuildCache</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildCache() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildController">func (*Builder) <a href="/src/target/Builder.go?s=12776:12817#L378">BuildController</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildController() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildCounters">func (*Builder) <a href="/src/target/Builder.go?s=9512:9551#L269">BuildCounters</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildCounters() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildDataAccess">func (*Builder) <a href="/src/target/Builder.go?s=10928:10969#L315">BuildDataAccess</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildDataAccess() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildDependencies">func (*Builder) <a href="/src/target/Builder.go?s=11846:11889#L348">BuildDependencies</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildDependencies() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildDiscovery">func (*Builder) <a href="/src/target/Builder.go?s=7737:7777#L212">BuildDiscovery</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildDiscovery() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildInterceptors">func (*Builder) <a href="/src/target/Builder.go?s=13525:13568#L402">BuildInterceptors</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildInterceptors() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.BuildLog">func (*Builder) <a href="/src/target/Builder.go?s=8511:8545#L235">BuildLog</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) BuildLog() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.Config">func (*Builder) <a href="/src/target/Builder.go?s=1784:1830#L31">Config</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) Config() *runtime.<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.Name">func (*Builder) <a href="/src/target/Builder.go?s=1724:1755#L27">Name</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) Name() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.References">func (*Builder) <a href="/src/target/Builder.go?s=1860:1910#L35">References</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) References() *runtime.<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.SetReferences">func (*Builder) <a href="/src/target/Builder.go?s=7561:7624#L204">SetReferences</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) SetReferences(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.Start">func (*Builder) <a href="/src/target/Builder.go?s=5753:5810#L143">Start</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) Start(config *runtime.<a href="#DynamicMap">DynamicMap</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.StartWithConfig">func (*Builder) <a href="/src/target/Builder.go?s=6876:6943#L178">StartWithConfig</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) StartWithConfig(config *runtime.<a href="#DynamicMap">DynamicMap</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Builder.StartWithFile">func (*Builder) <a href="/src/target/Builder.go?s=7172:7222#L189">StartWithFile</a></h3>
+				<pre>func (c *<a href="#Builder">Builder</a>) StartWithFile(path <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TLifeCycleManager">type <a href="/src/target/LifeCycleManager.go?s=166:198#L1">TLifeCycleManager</a></h2>
+			<pre>type TLifeCycleManager struct{}</pre>
+			
+
+			
+
+			
+				<pre>var <span id="LifeCycleManager">LifeCycleManager</span> *<a href="#TLifeCycleManager">TLifeCycleManager</a> = &amp;<a href="#TLifeCycleManager">TLifeCycleManager</a>{}</pre>
+				
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TLifeCycleManager.Close">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=4451:4516#L136">Close</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Close(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.CloseComponents">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=3960:4068#L120">CloseComponents</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) CloseComponents(refs *runtime.<a href="#References">References</a>, components []runtime.<a href="#IComponent">IComponent</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Debug">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=1326:1409#L36">Debug</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Debug(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Error">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=534:617#L12">Error</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Error(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Fatal">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=268:351#L4">Fatal</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Fatal(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.ForceClose">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=5171:5241#L159">ForceClose</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) ForceClose(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.ForceCloseComponents">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=4613:4726#L141">ForceCloseComponents</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) ForceCloseComponents(refs *runtime.<a href="#References">References</a>, components []runtime.<a href="#IComponent">IComponent</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Info">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=1063:1145#L28">Info</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Info(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Init">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=2658:2722#L78">Init</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.InitAndOpen">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=3125:3196#L92">InitAndOpen</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) InitAndOpen(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.InitAndOpenComponents">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=2818:2932#L83">InitAndOpenComponents</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) InitAndOpenComponents(refs *runtime.<a href="#References">References</a>, components []runtime.<a href="#IComponent">IComponent</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.InitComponents">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=2176:2283#L63">InitComponents</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) InitComponents(refs *runtime.<a href="#References">References</a>, components []runtime.<a href="#IComponent">IComponent</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Open">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=3800:3864#L115">Open</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Open(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.OpenComponents">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=3299:3406#L97">OpenComponents</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) OpenComponents(refs *runtime.<a href="#References">References</a>, components []runtime.<a href="#IComponent">IComponent</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Trace">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=1592:1675#L44">Trace</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Trace(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TLifeCycleManager.Warn">func (*TLifeCycleManager) <a href="/src/target/LifeCycleManager.go?s=800:882#L20">Warn</a></h3>
+				<pre>func (c *<a href="#TLifeCycleManager">TLifeCycleManager</a>) Warn(refs *runtime.<a href="#References">References</a>, message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

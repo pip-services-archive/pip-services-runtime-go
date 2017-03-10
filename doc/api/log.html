@@ -1,0 +1,806 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/log"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#FormatConsoleMessage">func FormatConsoleMessage(level string, message []interface{}) string</a></dd>
+			
+			
+				
+				<dd><a href="#AbstractLog">type AbstractLog</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractLog">func NewAbstractLog(id string, config *runtime.DynamicMap) *AbstractLog</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Debug">func (c *AbstractLog) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Error">func (c *AbstractLog) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Fatal">func (c *AbstractLog) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Info">func (c *AbstractLog) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Level">func (c *AbstractLog) Level() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.SetLevel">func (c *AbstractLog) SetLevel(value int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Trace">func (c *AbstractLog) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractLog.Warn">func (c *AbstractLog) Warn(message ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#CachedLog">type CachedLog</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCachedLog">func NewCachedLog(id string, config *runtime.DynamicMap) *CachedLog</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Close">func (c *CachedLog) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Debug">func (c *CachedLog) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Error">func (c *CachedLog) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Fatal">func (c *CachedLog) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Info">func (c *CachedLog) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Open">func (c *CachedLog) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Save">func (c *CachedLog) Save(entries []LogEntry) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Trace">func (c *CachedLog) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CachedLog.Warn">func (c *CachedLog) Warn(message ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#CachedLogSaver">type CachedLogSaver</a></dd>
+				
+				
+			
+				
+				<dd><a href="#CompositeLog">type CompositeLog</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCompositeLog">func NewCompositeLog(logs []runtime.ILog) *CompositeLog</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Close">func (c *CompositeLog) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Debug">func (c *CompositeLog) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Error">func (c *CompositeLog) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Fatal">func (c *CompositeLog) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Info">func (c *CompositeLog) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Init">func (c *CompositeLog) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Open">func (c *CompositeLog) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Trace">func (c *CompositeLog) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#CompositeLog.Warn">func (c *CompositeLog) Warn(message ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#ConsoleLog">type ConsoleLog</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewConsoleLog">func NewConsoleLog(config *runtime.DynamicMap) *ConsoleLog</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Debug">func (c *ConsoleLog) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Error">func (c *ConsoleLog) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Fatal">func (c *ConsoleLog) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Info">func (c *ConsoleLog) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Trace">func (c *ConsoleLog) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ConsoleLog.Warn">func (c *ConsoleLog) Warn(message ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#LogEntry">type LogEntry</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MakeLogEntry">func MakeLogEntry(component string, level int, correlationId string, message []interface{}) LogEntry</a></dd>
+				
+				
+			
+				
+				<dd><a href="#NullLog">type NullLog</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewNullLog">func NewNullLog(config *runtime.DynamicMap) *NullLog</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Debug">func (c *NullLog) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Error">func (c *NullLog) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Fatal">func (c *NullLog) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Info">func (c *NullLog) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Trace">func (c *NullLog) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullLog.Warn">func (c *NullLog) Warn(message ...interface{})</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/AbstractLog.go">AbstractLog.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/CachedLog.go">CachedLog.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/CompositeLog.go">CompositeLog.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/ConsoleLog.go">ConsoleLog.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/LogEntry.go">LogEntry.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/log/NullLog.go">NullLog.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="FormatConsoleMessage">func <a href="/src/target/ConsoleLog.go?s=290:359#L8">FormatConsoleMessage</a></h2>
+			<pre>func FormatConsoleMessage(level <a href="/pkg/builtin/#string">string</a>, message []interface{}) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AbstractLog">type <a href="/src/target/AbstractLog.go?s=96:176#L1">AbstractLog</a></h2>
+			<pre>type AbstractLog struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractLog">func <a href="/src/target/AbstractLog.go?s=180:251#L4">NewAbstractLog</a></h3>
+				<pre>func NewAbstractLog(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractLog">AbstractLog</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractLog.Debug">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=912:963#L26">Debug</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Error">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=746:797#L23">Error</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Fatal">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=690:741#L22">Fatal</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Info">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=857:907#L25">Info</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Level">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=557:590#L14">Level</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Level() <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.SetLevel">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=619:660#L18">SetLevel</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) SetLevel(value <a href="/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Trace">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=968:1019#L27">Trace</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractLog.Warn">func (*AbstractLog) <a href="/src/target/AbstractLog.go?s=802:852#L24">Warn</a></h3>
+				<pre>func (c *<a href="#AbstractLog">AbstractLog</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CachedLog">type <a href="/src/target/CachedLog.go?s=186:282#L1">CachedLog</a></h2>
+			<pre>type CachedLog struct {
+    <a href="#AbstractLog">AbstractLog</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCachedLog">func <a href="/src/target/CachedLog.go?s=354:421#L12">NewCachedLog</a></h3>
+				<pre>func NewCachedLog(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#CachedLog">CachedLog</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="CachedLog.Close">func (*CachedLog) <a href="/src/target/CachedLog.go?s=1628:1661#L61">Close</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Debug">func (*CachedLog) <a href="/src/target/CachedLog.go?s=2317:2366#L90">Debug</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Error">func (*CachedLog) <a href="/src/target/CachedLog.go?s=2003:2052#L78">Error</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Fatal">func (*CachedLog) <a href="/src/target/CachedLog.go?s=1897:1946#L74">Fatal</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Info">func (*CachedLog) <a href="/src/target/CachedLog.go?s=2213:2261#L86">Info</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Open">func (*CachedLog) <a href="/src/target/CachedLog.go?s=1121:1153#L42">Open</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Save">func (*CachedLog) <a href="/src/target/CachedLog.go?s=1022:1072#L38">Save</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Save(entries []<a href="#LogEntry">LogEntry</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Trace">func (*CachedLog) <a href="/src/target/CachedLog.go?s=2423:2472#L94">Trace</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CachedLog.Warn">func (*CachedLog) <a href="/src/target/CachedLog.go?s=2109:2157#L82">Warn</a></h3>
+				<pre>func (c *<a href="#CachedLog">CachedLog</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CachedLogSaver">type <a href="/src/target/CachedLog.go?s=286:350#L8">CachedLogSaver</a></h2>
+			<pre>type CachedLogSaver interface {
+    Save(entries []<a href="#LogEntry">LogEntry</a>)
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CompositeLog">type <a href="/src/target/CompositeLog.go?s=85:162#L1">CompositeLog</a></h2>
+			<pre>type CompositeLog struct {
+    <a href="#AbstractLog">AbstractLog</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCompositeLog">func <a href="/src/target/CompositeLog.go?s=166:221#L3">NewCompositeLog</a></h3>
+				<pre>func NewCompositeLog(logs []runtime.<a href="#ILog">ILog</a>) *<a href="#CompositeLog">CompositeLog</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="CompositeLog.Close">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=1171:1207#L42">Close</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Debug">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=2155:2207#L83">Debug</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Error">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=1579:1631#L59">Error</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Fatal">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=1385:1437#L51">Fatal</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Info">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=1964:2015#L75">Info</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Init">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=679:738#L23">Init</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Open">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=961:996#L33">Open</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Trace">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=2349:2401#L91">Trace</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="CompositeLog.Warn">func (*CompositeLog) <a href="/src/target/CompositeLog.go?s=1773:1824#L67">Warn</a></h3>
+				<pre>func (c *<a href="#CompositeLog">CompositeLog</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ConsoleLog">type <a href="/src/target/ConsoleLog.go?s=105:146#L1">ConsoleLog</a></h2>
+			<pre>type ConsoleLog struct {
+    <a href="#AbstractLog">AbstractLog</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewConsoleLog">func <a href="/src/target/ConsoleLog.go?s=150:208#L4">NewConsoleLog</a></h3>
+				<pre>func NewConsoleLog(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#ConsoleLog">ConsoleLog</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ConsoleLog.Debug">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=1162:1212#L37">Debug</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConsoleLog.Error">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=652:702#L19">Error</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConsoleLog.Fatal">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=480:530#L13">Fatal</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConsoleLog.Info">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=993:1042#L31">Info</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConsoleLog.Trace">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=1334:1384#L43">Trace</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ConsoleLog.Warn">func (*ConsoleLog) <a href="/src/target/ConsoleLog.go?s=824:873#L25">Warn</a></h3>
+				<pre>func (c *<a href="#ConsoleLog">ConsoleLog</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogEntry">type <a href="/src/target/LogEntry.go?s=32:352#L1">LogEntry</a></h2>
+			<pre>type LogEntry struct {
+    Time          <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>     `json:&#34;time&#34;`
+    Component     <a href="/pkg/builtin/#string">string</a>        `json:&#34;component&#34;`
+    Level         <a href="/pkg/builtin/#int">int</a>           `json:&#34;level&#34;`
+    CorrelationId <a href="/pkg/builtin/#string">string</a>        `json:&#34;correlationId&#34;`
+    Message       []interface{} `json:&#34;message&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="MakeLogEntry">func <a href="/src/target/LogEntry.go?s=356:456#L3">MakeLogEntry</a></h3>
+				<pre>func MakeLogEntry(component <a href="/pkg/builtin/#string">string</a>, level <a href="/pkg/builtin/#int">int</a>, correlationId <a href="/pkg/builtin/#string">string</a>, message []interface{}) <a href="#LogEntry">LogEntry</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="NullLog">type <a href="/src/target/NullLog.go?s=89:130#L1">NullLog</a></h2>
+			<pre>type NullLog struct {
+    <a href="#AbstractLog">AbstractLog</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNullLog">func <a href="/src/target/NullLog.go?s=134:186#L1">NewNullLog</a></h3>
+				<pre>func NewNullLog(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#NullLog">NullLog</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="NullLog.Debug">func (*NullLog) <a href="/src/target/NullLog.go?s=474:521#L9">Debug</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullLog.Error">func (*NullLog) <a href="/src/target/NullLog.go?s=320:367#L6">Error</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullLog.Fatal">func (*NullLog) <a href="/src/target/NullLog.go?s=268:315#L5">Fatal</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullLog.Info">func (*NullLog) <a href="/src/target/NullLog.go?s=423:469#L8">Info</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullLog.Trace">func (*NullLog) <a href="/src/target/NullLog.go?s=526:573#L10">Trace</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullLog.Warn">func (*NullLog) <a href="/src/target/NullLog.go?s=372:418#L7">Warn</a></h3>
+				<pre>func (c *<a href="#NullLog">NullLog</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

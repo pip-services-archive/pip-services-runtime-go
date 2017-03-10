@@ -1,0 +1,393 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/run"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#Microservice">type Microservice</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMicroservice">func NewMicroservice(builder *build.Builder) *Microservice</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMicroserviceWithConfig">func NewMicroserviceWithConfig(builder *build.Builder, config *runtime.DynamicMap) *Microservice</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Error">func (c *Microservice) Error(message interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Fatal">func (c *Microservice) Fatal(message interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Info">func (c *Microservice) Info(message interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.LoadConfig">func (c *Microservice) LoadConfig(configPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.SetConfig">func (c *Microservice) SetConfig(config interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Start">func (c *Microservice) Start() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.StartWithConfig">func (c *Microservice) StartWithConfig(config *runtime.DynamicMap) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.StartWithConfigFile">func (c *Microservice) StartWithConfigFile(configPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Stop">func (c *Microservice) Stop() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Microservice.Trace">func (c *Microservice) Trace(message interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#ProcessRunner">type ProcessRunner</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewProcessRunner">func NewProcessRunner(builder *build.Builder) *ProcessRunner</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.LoadConfig">func (c *ProcessRunner) LoadConfig(configPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.LoadConfigWithDefault">func (c *ProcessRunner) LoadConfigWithDefault(defaultConfigPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.Run">func (c *ProcessRunner) Run() (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.RunWithConfig">func (c *ProcessRunner) RunWithConfig(config interface{}) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.RunWithConfigFile">func (c *ProcessRunner) RunWithConfigFile(configPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.RunWithDefaultConfigFile">func (c *ProcessRunner) RunWithDefaultConfigFile(defaultConfigPath string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#ProcessRunner.SetConfig">func (c *ProcessRunner) SetConfig(config interface{})</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/run/Microservice.go">Microservice.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/run/ProcessRunner.go">ProcessRunner.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Microservice">type <a href="/src/target/Microservice.go?s=208:364#L1">Microservice</a></h2>
+			<pre>type Microservice struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMicroservice">func <a href="/src/target/Microservice.go?s=368:426#L6">NewMicroservice</a></h3>
+				<pre>func NewMicroservice(builder *<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/">build</a>.<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/#Builder">Builder</a>) *<a href="#Microservice">Microservice</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMicroserviceWithConfig">func <a href="/src/target/Microservice.go?s=482:578#L10">NewMicroserviceWithConfig</a></h3>
+				<pre>func NewMicroserviceWithConfig(builder *<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/">build</a>.<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/#Builder">Builder</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#Microservice">Microservice</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="Microservice.Error">func (*Microservice) <a href="/src/target/Microservice.go?s=1014:1063#L28">Error</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Error(message interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.Fatal">func (*Microservice) <a href="/src/target/Microservice.go?s=905:954#L24">Fatal</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Fatal(message interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.Info">func (*Microservice) <a href="/src/target/Microservice.go?s=1123:1171#L32">Info</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Info(message interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.LoadConfig">func (*Microservice) <a href="/src/target/Microservice.go?s=752:810#L18">LoadConfig</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) LoadConfig(configPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.SetConfig">func (*Microservice) <a href="/src/target/Microservice.go?s=650:702#L14">SetConfig</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) SetConfig(config interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.Start">func (*Microservice) <a href="/src/target/Microservice.go?s=2225:2261#L71">Start</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Start() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.StartWithConfig">func (*Microservice) <a href="/src/target/Microservice.go?s=2440:2512#L78">StartWithConfig</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) StartWithConfig(config *runtime.<a href="#DynamicMap">DynamicMap</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.StartWithConfigFile">func (*Microservice) <a href="/src/target/Microservice.go?s=2575:2642#L83">StartWithConfigFile</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) StartWithConfigFile(configPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.Stop">func (*Microservice) <a href="/src/target/Microservice.go?s=2747:2782#L88">Stop</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Stop() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="Microservice.Trace">func (*Microservice) <a href="/src/target/Microservice.go?s=1230:1279#L36">Trace</a></h3>
+				<pre>func (c *<a href="#Microservice">Microservice</a>) Trace(message interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ProcessRunner">type <a href="/src/target/ProcessRunner.go?s=133:256#L1">ProcessRunner</a></h2>
+			<pre>type ProcessRunner struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewProcessRunner">func <a href="/src/target/ProcessRunner.go?s=260:320#L6">NewProcessRunner</a></h3>
+				<pre>func NewProcessRunner(builder *<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/">build</a>.<a href="/pkg/github.com/pip-services/pip-services-runtime-go/build/#Builder">Builder</a>) *<a href="#ProcessRunner">ProcessRunner</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="ProcessRunner.LoadConfig">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=817:876#L26">LoadConfig</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) LoadConfig(configPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.LoadConfigWithDefault">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=935:1012#L30">LoadConfigWithDefault</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) LoadConfigWithDefault(defaultConfigPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.Run">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=1515:1556#L49">Run</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) Run() (err <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.RunWithConfig">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=1924:1987#L66">RunWithConfig</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) RunWithConfig(config interface{}) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.RunWithConfigFile">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=2041:2107#L71">RunWithConfigFile</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) RunWithConfigFile(configPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.RunWithDefaultConfigFile">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=2203:2283#L76">RunWithDefaultConfigFile</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) RunWithDefaultConfigFile(defaultConfigPath <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ProcessRunner.SetConfig">func (*ProcessRunner) <a href="/src/target/ProcessRunner.go?s=717:770#L22">SetConfig</a></h3>
+				<pre>func (c *<a href="#ProcessRunner">ProcessRunner</a>) SetConfig(config interface{})</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

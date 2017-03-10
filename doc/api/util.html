@@ -1,0 +1,442 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/util"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#TConverter">type TConverter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.FromMultiString">func (c *TConverter) FromMultiString(value map[string]string, language string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToBoolean">func (c *TConverter) ToBoolean(value interface{}) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToBooleanWithDefault">func (c *TConverter) ToBooleanWithDefault(value interface{}, defaultValue bool) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToDate">func (c *TConverter) ToDate(value interface{}) time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToDateWithDefault">func (c *TConverter) ToDateWithDefault(value interface{}, defaultValue time.Time) time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToFloat">func (c *TConverter) ToFloat(value interface{}) float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToFloatWithDefault">func (c *TConverter) ToFloatWithDefault(value interface{}, defaultValue float64) float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToInteger">func (c *TConverter) ToInteger(value interface{}) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToIntegerWithDefault">func (c *TConverter) ToIntegerWithDefault(value interface{}, defaultValue int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToLong">func (c *TConverter) ToLong(value interface{}) int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToLongWithDefault">func (c *TConverter) ToLongWithDefault(value interface{}, defaultValue int64) int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToMap">func (c *TConverter) ToMap(value interface{}) map[string]interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToMapWithDefault">func (c *TConverter) ToMapWithDefault(value interface{}, defaultValue map[string]interface{}) map[string]interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableBoolean">func (c *TConverter) ToNullableBoolean(value interface{}) *bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableDate">func (c *TConverter) ToNullableDate(value interface{}) *time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableFloat">func (c *TConverter) ToNullableFloat(value interface{}) *float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableInteger">func (c *TConverter) ToNullableInteger(value interface{}) *int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableLong">func (c *TConverter) ToNullableLong(value interface{}) *int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableMap">func (c *TConverter) ToNullableMap(value interface{}) *map[string]interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToNullableString">func (c *TConverter) ToNullableString(value interface{}) *string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToString">func (c *TConverter) ToString(value interface{}) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TConverter.ToStringWithDefault">func (c *TConverter) ToStringWithDefault(value interface{}, defaultValue string) string</a></dd>
+				
+			
+				
+				<dd><a href="#TIdGenerator">type TIdGenerator</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TIdGenerator.Short">func (c *TIdGenerator) Short() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#TIdGenerator.UUID">func (c *TIdGenerator) UUID() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/util/Converter.go">Converter.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/util/IdGenerator.go">IdGenerator.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="TConverter">type <a href="/src/target/Converter.go?s=120:144#L2">TConverter</a></h2>
+			<pre>type TConverter struct{}</pre>
+			
+
+			
+
+			
+				<pre>var <span id="Converter">Converter</span> *<a href="#TConverter">TConverter</a> = &amp;<a href="#TConverter">TConverter</a>{}</pre>
+				
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TConverter.FromMultiString">func (*TConverter) <a href="/src/target/Converter.go?s=7714:7799#L283">FromMultiString</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) FromMultiString(value map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>, language <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToBoolean">func (*TConverter) <a href="/src/target/Converter.go?s=2129:2183#L82">ToBoolean</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToBoolean(value interface{}) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToBooleanWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=2241:2325#L86">ToBooleanWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToBooleanWithDefault(value interface{}, defaultValue <a href="/pkg/builtin/#bool">bool</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToDate">func (*TConverter) <a href="/src/target/Converter.go?s=7407:7463#L273">ToDate</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToDate(value interface{}) <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToDateWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=7523:7614#L277">ToDateWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToDateWithDefault(value interface{}, defaultValue <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>) <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToFloat">func (*TConverter) <a href="/src/target/Converter.go?s=5690:5745#L215">ToFloat</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToFloat(value interface{}) <a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToFloatWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=5797:5885#L219">ToFloatWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToFloatWithDefault(value interface{}, defaultValue <a href="/pkg/builtin/#float64">float64</a>) <a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToInteger">func (*TConverter) <a href="/src/target/Converter.go?s=4123:4176#L157">ToInteger</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToInteger(value interface{}) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToIntegerWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=4230:4312#L161">ToIntegerWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToIntegerWithDefault(value interface{}, defaultValue <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToLong">func (*TConverter) <a href="/src/target/Converter.go?s=3666:3718#L140">ToLong</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToLong(value interface{}) <a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToLongWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=3769:3852#L144">ToLongWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToLongWithDefault(value interface{}, defaultValue <a href="/pkg/builtin/#int64">int64</a>) <a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToMap">func (*TConverter) <a href="/src/target/Converter.go?s=10490:10558#L389">ToMap</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToMap(value interface{}) map[<a href="/pkg/builtin/#string">string</a>]interface{}</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToMapWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=10632:10748#L393">ToMapWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToMapWithDefault(value interface{}, defaultValue map[<a href="/pkg/builtin/#string">string</a>]interface{}) map[<a href="/pkg/builtin/#string">string</a>]interface{}</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableBoolean">func (*TConverter) <a href="/src/target/Converter.go?s=1425:1488#L52">ToNullableBoolean</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableBoolean(value interface{}) *<a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableDate">func (*TConverter) <a href="/src/target/Converter.go?s=5986:6051#L225">ToNullableDate</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableDate(value interface{}) *<a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableFloat">func (*TConverter) <a href="/src/target/Converter.go?s=4415:4479#L167">ToNullableFloat</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableFloat(value interface{}) *<a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableInteger">func (*TConverter) <a href="/src/target/Converter.go?s=3952:4014#L150">ToNullableInteger</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableInteger(value interface{}) *<a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableLong">func (*TConverter) <a href="/src/target/Converter.go?s=2428:2489#L92">ToNullableLong</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableLong(value interface{}) *<a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableMap">func (*TConverter) <a href="/src/target/Converter.go?s=9947:10024#L367">ToNullableMap</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableMap(value interface{}) *map[<a href="/pkg/builtin/#string">string</a>]interface{}</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToNullableString">func (*TConverter) <a href="/src/target/Converter.go?s=193:257#L6">ToNullableString</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToNullableString(value interface{}) *<a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToString">func (*TConverter) <a href="/src/target/Converter.go?s=1126:1181#L42">ToString</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToString(value interface{}) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TConverter.ToStringWithDefault">func (*TConverter) <a href="/src/target/Converter.go?s=1236:1323#L46">ToStringWithDefault</a></h3>
+				<pre>func (c *<a href="#TConverter">TConverter</a>) ToStringWithDefault(value interface{}, defaultValue <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TIdGenerator">type <a href="/src/target/IdGenerator.go?s=116:142#L1">TIdGenerator</a></h2>
+			<pre>type TIdGenerator struct{}</pre>
+			
+
+			
+
+			
+				<pre>var <span id="IdGenerator">IdGenerator</span> *<a href="#TIdGenerator">TIdGenerator</a> = &amp;<a href="#TIdGenerator">TIdGenerator</a>{}</pre>
+				
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TIdGenerator.Short">func (*TIdGenerator) <a href="/src/target/IdGenerator.go?s=197:234#L4">Short</a></h3>
+				<pre>func (c *<a href="#TIdGenerator">TIdGenerator</a>) Short() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TIdGenerator.UUID">func (*TIdGenerator) <a href="/src/target/IdGenerator.go?s=334:370#L9">UUID</a></h3>
+				<pre>func (c *<a href="#TIdGenerator">TIdGenerator</a>) UUID() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

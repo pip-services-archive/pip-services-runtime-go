@@ -1,0 +1,204 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/logic"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractController">type AbstractController</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractController">func NewAbstractController(id string, config *runtime.DynamicMap) *AbstractController</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractController.DB">func (c *AbstractController) DB() runtime.IDataAccess</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractController.Deps">func (c *AbstractController) Deps() map[string]runtime.IClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractController.Init">func (c *AbstractController) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractController.Instrument">func (c *AbstractController) Instrument(name string) *runtime.Timing</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/logic/AbstractController.go">AbstractController.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractController">type <a href="/src/target/AbstractController.go?s=87:224#L1">AbstractController</a></h2>
+			<pre>type AbstractController struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractController">func <a href="/src/target/AbstractController.go?s=228:313#L4">NewAbstractController</a></h3>
+				<pre>func NewAbstractController(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractController">AbstractController</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractController.DB">func (*AbstractController) <a href="/src/target/AbstractController.go?s=423:476#L8">DB</a></h3>
+				<pre>func (c *<a href="#AbstractController">AbstractController</a>) DB() runtime.<a href="#IDataAccess">IDataAccess</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractController.Deps">func (*AbstractController) <a href="/src/target/AbstractController.go?s=502:564#L12">Deps</a></h3>
+				<pre>func (c *<a href="#AbstractController">AbstractController</a>) Deps() map[<a href="/pkg/builtin/#string">string</a>]runtime.<a href="#IClient">IClient</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractController.Init">func (*AbstractController) <a href="/src/target/AbstractController.go?s=592:657#L16">Init</a></h3>
+				<pre>func (c *<a href="#AbstractController">AbstractController</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractController.Instrument">func (*AbstractController) <a href="/src/target/AbstractController.go?s=819:887#L26">Instrument</a></h3>
+				<pre>func (c *<a href="#AbstractController">AbstractController</a>) Instrument(name <a href="/pkg/builtin/#string">string</a>) *runtime.<a href="#Timing">Timing</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

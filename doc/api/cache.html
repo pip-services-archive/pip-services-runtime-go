@@ -1,0 +1,340 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/cache"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractCache">type AbstractCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractCache">func NewAbstractCache(id string, config *runtime.DynamicMap) *AbstractCache</a></dd>
+				
+				
+			
+				
+				<dd><a href="#CacheEntry">type CacheEntry</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCacheEntry">func NewCacheEntry(key string, value interface{}) *CacheEntry</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MemoryCache">type MemoryCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMemoryCache">func NewMemoryCache(config *runtime.DynamicMap) *MemoryCache</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MemoryCache.Get">func (c *MemoryCache) Get(key string, value interface{}) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MemoryCache.Set">func (c *MemoryCache) Set(key string, value interface{}) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MemoryCache.Unset">func (c *MemoryCache) Unset(key string) error</a></dd>
+				
+			
+				
+				<dd><a href="#NullCache">type NullCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewNullCache">func NewNullCache(config *runtime.DynamicMap) *NullCache</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCache.Get">func (c *NullCache) Get(key string, value interface{}) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCache.Set">func (c *NullCache) Set(key string, value interface{}) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NullCache.Unset">func (c *NullCache) Unset(key string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/cache/AbstractCache.go">AbstractCache.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/cache/CacheEntry.go">CacheEntry.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/cache/MemoryCache.go">MemoryCache.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/cache/NullCache.go">NullCache.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractCache">type <a href="/src/target/AbstractCache.go?s=88:149#L1">AbstractCache</a></h2>
+			<pre>type AbstractCache struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractCache">func <a href="/src/target/AbstractCache.go?s=153:228#L1">NewAbstractCache</a></h3>
+				<pre>func NewAbstractCache(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractCache">AbstractCache</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="CacheEntry">type <a href="/src/target/CacheEntry.go?s=34:184#L1">CacheEntry</a></h2>
+			<pre>type CacheEntry struct {
+    Created  <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>
+    Accessed <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>
+    Key      <a href="/pkg/builtin/#string">string</a>
+    Value    interface{}
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCacheEntry">func <a href="/src/target/CacheEntry.go?s=188:249#L2">NewCacheEntry</a></h3>
+				<pre>func NewCacheEntry(key <a href="/pkg/builtin/#string">string</a>, value interface{}) *<a href="#CacheEntry">CacheEntry</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="MemoryCache">type <a href="/src/target/MemoryCache.go?s=204:346#L3">MemoryCache</a></h2>
+			<pre>type MemoryCache struct {
+    <a href="#AbstractCache">AbstractCache</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMemoryCache">func <a href="/src/target/MemoryCache.go?s=350:410#L11">NewMemoryCache</a></h3>
+				<pre>func NewMemoryCache(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#MemoryCache">MemoryCache</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="MemoryCache.Get">func (*MemoryCache) <a href="/src/target/MemoryCache.go?s=1695:1772#L54">Get</a></h3>
+				<pre>func (c *<a href="#MemoryCache">MemoryCache</a>) Get(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MemoryCache.Set">func (*MemoryCache) <a href="/src/target/MemoryCache.go?s=2220:2297#L74">Set</a></h3>
+				<pre>func (c *<a href="#MemoryCache">MemoryCache</a>) Set(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MemoryCache.Unset">func (*MemoryCache) <a href="/src/target/MemoryCache.go?s=3012:3057#L108">Unset</a></h3>
+				<pre>func (c *<a href="#MemoryCache">MemoryCache</a>) Unset(key <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NullCache">type <a href="/src/target/NullCache.go?s=91:136#L1">NullCache</a></h2>
+			<pre>type NullCache struct {
+    <a href="#AbstractCache">AbstractCache</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNullCache">func <a href="/src/target/NullCache.go?s=140:196#L1">NewNullCache</a></h3>
+				<pre>func NewNullCache(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#NullCache">NullCache</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="NullCache.Get">func (*NullCache) <a href="/src/target/NullCache.go?s=286:361#L5">Get</a></h3>
+				<pre>func (c *<a href="#NullCache">NullCache</a>) Get(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCache.Set">func (*NullCache) <a href="/src/target/NullCache.go?s=391:466#L9">Set</a></h3>
+				<pre>func (c *<a href="#NullCache">NullCache</a>) Set(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NullCache.Unset">func (*NullCache) <a href="/src/target/NullCache.go?s=498:541#L13">Unset</a></h3>
+				<pre>func (c *<a href="#NullCache">NullCache</a>) Unset(key <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

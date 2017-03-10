@@ -1,0 +1,30 @@
+{    
+    "log": {
+        "type": "console",
+        "level": 10
+    },
+    
+    "counters": {
+        "type": "log",
+        "timeout": 10000
+    },
+    
+    "db": {
+        "type": "file",
+        "path": "../../dummies.json"
+    },
+    
+    "deps": [],
+    
+    "api": [
+        {
+            "type": "rest",
+            "transport": {
+                "type": "http",
+                "host": "0.0.0.0",
+                "port": 3000
+            }
+        }
+    ]
+    
+}

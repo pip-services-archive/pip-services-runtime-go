@@ -1,0 +1,2350 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractComponent">type AbstractComponent</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractComponent">func NewAbstractComponent(id string, config *DynamicMap) *AbstractComponent</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.BeginTiming">func (c *AbstractComponent) BeginTiming(name string) *Timing</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Close">func (c *AbstractComponent) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Config">func (c *AbstractComponent) Config() *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Debug">func (c *AbstractComponent) Debug(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Error">func (c *AbstractComponent) Error(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Fatal">func (c *AbstractComponent) Fatal(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Id">func (c *AbstractComponent) Id() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Increment">func (c *AbstractComponent) Increment(name string, value int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.IncrementOne">func (c *AbstractComponent) IncrementOne(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Info">func (c *AbstractComponent) Info(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Init">func (c *AbstractComponent) Init(refs *References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Last">func (c *AbstractComponent) Last(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewBadRequest">func (c *AbstractComponent) NewBadRequest(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewCloseError">func (c *AbstractComponent) NewCloseError(message string, err error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewConfigError">func (c *AbstractComponent) NewConfigError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewConflict">func (c *AbstractComponent) NewConflict(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewError">func (c *AbstractComponent) NewError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewInternalError">func (c *AbstractComponent) NewInternalError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewNotFound">func (c *AbstractComponent) NewNotFound(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewOpenError">func (c *AbstractComponent) NewOpenError(message string, err error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewReadError">func (c *AbstractComponent) NewReadError(message string, err error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewStateError">func (c *AbstractComponent) NewStateError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewUnauthorized">func (c *AbstractComponent) NewUnauthorized(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.NewWriteError">func (c *AbstractComponent) NewWriteError(message string, err error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Open">func (c *AbstractComponent) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Refs">func (c *AbstractComponent) Refs() *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Stats">func (c *AbstractComponent) Stats(name string, value float32)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Timestamp">func (c *AbstractComponent) Timestamp(name string, time time.Time)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.TimestampNow">func (c *AbstractComponent) TimestampNow(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Trace">func (c *AbstractComponent) Trace(message ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractComponent.Warn">func (c *AbstractComponent) Warn(message ...interface{})</a></dd>
+				
+			
+				
+				<dd><a href="#Counter">type Counter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCounter">func NewCounter(name string, typ int) *Counter</a></dd>
+				
+				
+			
+				
+				<dd><a href="#DataPage">type DataPage</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewDataPage">func NewDataPage(total *int32, data []interface{}) *DataPage</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewEmptyDataPage">func NewEmptyDataPage() *DataPage</a></dd>
+				
+				
+			
+				
+				<dd><a href="#DynamicMap">type DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewEmptyMap">func NewEmptyMap() *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMapAndSet">func NewMapAndSet(params ...interface{}) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMapFromJson">func NewMapFromJson(json string) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMapOf">func NewMapOf(value interface{}) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewMapWithDefaults">func NewMapWithDefaults(m *DynamicMap, defaults *DynamicMap) *DynamicMap</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.AssignTo">func (c *DynamicMap) AssignTo(value interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Get">func (c *DynamicMap) Get(prop string) interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetBoolean">func (c *DynamicMap) GetBoolean(prop string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetBooleanWithDefault">func (c *DynamicMap) GetBooleanWithDefault(prop string, defaultValue bool) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetDate">func (c *DynamicMap) GetDate(prop string) time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetDateWithDefault">func (c *DynamicMap) GetDateWithDefault(prop string, defaultValue time.Time) time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetFloat">func (c *DynamicMap) GetFloat(prop string) float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetFloatWithDefault">func (c *DynamicMap) GetFloatWithDefault(prop string, defaultValue float64) float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetInteger">func (c *DynamicMap) GetInteger(prop string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetIntegerWithDefault">func (c *DynamicMap) GetIntegerWithDefault(prop string, defaultValue int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetLong">func (c *DynamicMap) GetLong(prop string) int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetLongWithDefault">func (c *DynamicMap) GetLongWithDefault(prop string, defaultValue int64) int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetMap">func (c *DynamicMap) GetMap(prop string) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetMapWithDefault">func (c *DynamicMap) GetMapWithDefault(prop string, defaultValue *DynamicMap) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableBoolean">func (c *DynamicMap) GetNullableBoolean(prop string) *bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableDate">func (c *DynamicMap) GetNullableDate(prop string) *time.Time</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableFloat">func (c *DynamicMap) GetNullableFloat(prop string) *float64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableInteger">func (c *DynamicMap) GetNullableInteger(prop string) *int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableLong">func (c *DynamicMap) GetNullableLong(prop string) *int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableMap">func (c *DynamicMap) GetNullableMap(prop string) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetNullableString">func (c *DynamicMap) GetNullableString(prop string) *string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetString">func (c *DynamicMap) GetString(prop string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.GetStringWithDefault">func (c *DynamicMap) GetStringWithDefault(prop string, defaultValue string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Has">func (c *DynamicMap) Has(prop string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.HasNot">func (c *DynamicMap) HasNot(prop string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Merge">func (c *DynamicMap) Merge(other *DynamicMap, deep bool) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.MergeDeep">func (c *DynamicMap) MergeDeep(other *DynamicMap) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Omit">func (c *DynamicMap) Omit(props ...string) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Pick">func (c *DynamicMap) Pick(props ...string) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Remove">func (c *DynamicMap) Remove(prop string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.RemoveAll">func (c *DynamicMap) RemoveAll(props ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.Set">func (c *DynamicMap) Set(prop string, value interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.SetAll">func (c *DynamicMap) SetAll(params ...interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.SetArray">func (c *DynamicMap) SetArray(params []interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.SetDefaults">func (c *DynamicMap) SetDefaults(defaults *DynamicMap, deep bool) *DynamicMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DynamicMap.SetDefaultsDeep">func (c *DynamicMap) SetDefaultsDeep(defaults *DynamicMap) *DynamicMap</a></dd>
+				
+			
+				
+				<dd><a href="#FilterParams">type FilterParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewEmptyFilterParams">func NewEmptyFilterParams() *FilterParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewFilterParamsAndSet">func NewFilterParamsAndSet(params ...interface{}) *FilterParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewFilterParamsFromJson">func NewFilterParamsFromJson(json string) *FilterParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewFilterParamsOf">func NewFilterParamsOf(value interface{}) *FilterParams</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IAddon">type IAddon</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ICache">type ICache</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IClient">type IClient</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IComponent">type IComponent</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IConfig">type IConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IController">type IController</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ICounters">type ICounters</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IDataAccess">type IDataAccess</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IDiscovery">type IDiscovery</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IInterceptor">type IInterceptor</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ILog">type ILog</a></dd>
+				
+				
+			
+				
+				<dd><a href="#IService">type IService</a></dd>
+				
+				
+			
+				
+				<dd><a href="#ITimingSetter">type ITimingSetter</a></dd>
+				
+				
+			
+				
+				<dd><a href="#MicroserviceError">type MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBadRequest">func NewBadRequest(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBuildError">func NewBuildError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCallError">func NewCallError(message string, cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewCloseError">func NewCloseError(message string, cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewConfigError">func NewConfigError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewConflict">func NewConflict(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewError">func NewError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewInternalError">func NewInternalError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewNotFound">func NewNotFound(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewOpenError">func NewOpenError(message string, cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewReadError">func NewReadError(message string, cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewStateError">func NewStateError(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewUnauthorized">func NewUnauthorized(message string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewWriteError">func NewWriteError(message string, cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#WrapError">func WrapError(err error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#WrapErrorWithMessage">func WrapErrorWithMessage(err error, message string) *MicroserviceError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.Error">func (e *MicroserviceError) Error() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.ForComponent">func (e *MicroserviceError) ForComponent(component string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.WithCause">func (e *MicroserviceError) WithCause(cause error) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.WithCode">func (e *MicroserviceError) WithCode(code string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.WithCorrelation">func (e *MicroserviceError) WithCorrelation(correlation string) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.WithDetails">func (e *MicroserviceError) WithDetails(details ...interface{}) *MicroserviceError</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#MicroserviceError.WithStatus">func (e *MicroserviceError) WithStatus(status int) *MicroserviceError</a></dd>
+				
+			
+				
+				<dd><a href="#PagingParams">type PagingParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewEmptyPagingParams">func NewEmptyPagingParams() *PagingParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewPagingParams">func NewPagingParams(skip, take, paging interface{}) *PagingParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewPagingParamsFromMap">func NewPagingParamsFromMap(value *DynamicMap) *PagingParams</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#PagingParams.GetSkip">func (c *PagingParams) GetSkip(minSkip int) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#PagingParams.GetTake">func (c *PagingParams) GetTake(maxTake int) int</a></dd>
+				
+			
+				
+				<dd><a href="#References">type References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewReferences">func NewReferences() *References</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.GetComponents">func (refs *References) GetComponents() []IComponent</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.GetDep">func (refs *References) GetDep(name string) IClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithAPI">func (refs *References) WithAPI(api ...IService) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithAddons">func (refs *References) WithAddons(addons ...IAddon) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithCache">func (refs *References) WithCache(cache ICache) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithConfig">func (refs *References) WithConfig(config IConfig) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithCounters">func (refs *References) WithCounters(counters ICounters) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithCtrl">func (refs *References) WithCtrl(ctrl IController) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithDB">func (refs *References) WithDB(db IDataAccess) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithDep">func (refs *References) WithDep(name string, dep IClient) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithDeps">func (refs *References) WithDeps(params ...interface{}) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithInts">func (refs *References) WithInts(ints ...IInterceptor) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithLog">func (refs *References) WithLog(log ILog) *References</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#References.WithLogic">func (refs *References) WithLogic(logic IController) *References</a></dd>
+				
+			
+				
+				<dd><a href="#Timing">type Timing</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#EmptyTiming">func EmptyTiming() *Timing</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewTiming">func NewTiming(setter ITimingSetter, name string) *Timing</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Timing.EndTiming">func (t *Timing) EndTiming()</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/AbstractComponent.go">AbstractComponent.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/Counter.go">Counter.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/DataPage.go">DataPage.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/DynamicMap.go">DynamicMap.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/FilterParams.go">FilterParams.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IAddon.go">IAddon.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/ICache.go">ICache.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IClient.go">IClient.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IComponent.go">IComponent.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IConfig.go">IConfig.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IController.go">IController.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/ICounters.go">ICounters.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IDataAccess.go">IDataAccess.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IDiscovery.go">IDiscovery.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IInterceptor.go">IInterceptor.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/ILog.go">ILog.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/IService.go">IService.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/MicroserviceError.go">MicroserviceError.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/PagingParams.go">PagingParams.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/References.go">References.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/Timing.go">Timing.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<pre>const (
+    <span id="CounterTypeInterval">CounterTypeInterval</span>   = 0
+    <span id="CounterTypeLastValue">CounterTypeLastValue</span>  = 1
+    <span id="CounterTypeStatistics">CounterTypeStatistics</span> = 2
+    <span id="CounterTypeTimestamp">CounterTypeTimestamp</span>  = 3
+    <span id="CounterTypeIncrement">CounterTypeIncrement</span>  = 4
+)</pre>
+				
+			
+				<pre>const (
+    <span id="LogLevelNone">LogLevelNone</span>  = 0
+    <span id="LogLevelFatal">LogLevelFatal</span> = 1
+    <span id="LogLevelError">LogLevelError</span> = 2
+    <span id="LogLevelWarn">LogLevelWarn</span>  = 3
+    <span id="LogLevelInfo">LogLevelInfo</span>  = 4
+    <span id="LogLevelDebug">LogLevelDebug</span> = 5
+    <span id="LogLevelTrace">LogLevelTrace</span> = 6
+)</pre>
+				
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractComponent">type <a href="/src/target/AbstractComponent.go?s=36:169#L1">AbstractComponent</a></h2>
+			<pre>type AbstractComponent struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractComponent">func <a href="/src/target/AbstractComponent.go?s=173:248#L3">NewAbstractComponent</a></h3>
+				<pre>func NewAbstractComponent(id <a href="/pkg/builtin/#string">string</a>, config *<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractComponent">AbstractComponent</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractComponent.BeginTiming">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3603:3663#L120">BeginTiming</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) BeginTiming(name <a href="/pkg/builtin/#string">string</a>) *<a href="#Timing">Timing</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Close">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1023:1064#L39">Close</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Config">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=493:541#L14">Config</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Config() *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Debug">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3347:3404#L110">Debug</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Debug(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Error">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3015:3072#L98">Error</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Error(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Fatal">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2903:2960#L94">Fatal</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Fatal(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Id">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=428:467#L10">Id</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Id() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Increment">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=4436:4497#L148">Increment</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Increment(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.IncrementOne">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=4314:4367#L144">IncrementOne</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) IncrementOne(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Info">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3237:3293#L106">Info</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Info(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Init">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=676:732#L24">Init</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Init(refs *<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Last">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3926:3986#L132">Last</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Last(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewBadRequest">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2330:2406#L76">NewBadRequest</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewBadRequest(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewCloseError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1866:1953#L66">NewCloseError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewCloseError(message <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewConfigError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1433:1510#L54">NewConfigError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewConfigError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewConflict">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2747:2821#L88">NewConflict</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewConflict(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1159:1230#L46">NewError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewInternalError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1288:1367#L50">NewInternalError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewInternalError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewNotFound">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2612:2686#L84">NewNotFound</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewNotFound(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewOpenError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1713:1799#L62">NewOpenError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewOpenError(message <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewReadError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2019:2105#L69">NewReadError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewReadError(message <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewStateError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=1574:1650#L58">NewStateError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewStateError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewUnauthorized">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2469:2547#L80">NewUnauthorized</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewUnauthorized(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.NewWriteError">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=2171:2258#L72">NewWriteError</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) NewWriteError(message <a href="/pkg/builtin/#string">string</a>, err <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Open">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=912:952#L34">Open</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Refs">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=571:617#L18">Refs</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Refs() *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Stats">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3796:3857#L128">Stats</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Stats(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Timestamp">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=4176:4242#L140">Timestamp</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Timestamp(name <a href="/pkg/builtin/#string">string</a>, time <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.TimestampNow">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=4054:4107#L136">TimestampNow</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) TimestampNow(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Trace">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3459:3516#L114">Trace</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Trace(message ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractComponent.Warn">func (*AbstractComponent) <a href="/src/target/AbstractComponent.go?s=3127:3183#L102">Warn</a></h3>
+				<pre>func (c *<a href="#AbstractComponent">AbstractComponent</a>) Warn(message ...interface{})</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Counter">type <a href="/src/target/Counter.go?s=36:336#L1">Counter</a></h2>
+			<pre>type Counter struct {
+    Name  <a href="/pkg/builtin/#string">string</a>     `json:&#34;name&#34;`
+    Type  <a href="/pkg/builtin/#int">int</a>        `json:&#34;type&#34;`
+    Last  *<a href="/pkg/builtin/#float32">float32</a>   `json:&#34;last&#34;`
+    Count *<a href="/pkg/builtin/#int">int</a>       `json:&#34;count&#34;`
+    Min   *<a href="/pkg/builtin/#float32">float32</a>   `json:&#34;min&#34;`
+    Max   *<a href="/pkg/builtin/#float32">float32</a>   `json:&#34;max&#34;`
+    Avg   *<a href="/pkg/builtin/#float32">float32</a>   `json:&#34;avg&#34;`
+    Time  *<a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a> `json:&#34;time&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCounter">func <a href="/src/target/Counter.go?s=340:386#L6">NewCounter</a></h3>
+				<pre>func NewCounter(name <a href="/pkg/builtin/#string">string</a>, typ <a href="/pkg/builtin/#int">int</a>) *<a href="#Counter">Counter</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="DataPage">type <a href="/src/target/DataPage.go?s=19:124#L1">DataPage</a></h2>
+			<pre>type DataPage struct {
+    Total *<a href="/pkg/builtin/#int32">int32</a>        `json:&#34;total&#34;`
+    Data  []interface{} `json:&#34;data&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDataPage">func <a href="/src/target/DataPage.go?s=194:254#L2">NewDataPage</a></h3>
+				<pre>func NewDataPage(total *<a href="/pkg/builtin/#int32">int32</a>, data []interface{}) *<a href="#DataPage">DataPage</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewEmptyDataPage">func <a href="/src/target/DataPage.go?s=128:161#L1">NewEmptyDataPage</a></h3>
+				<pre>func NewEmptyDataPage() *<a href="#DataPage">DataPage</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="DynamicMap">type <a href="/src/target/DynamicMap.go?s=136:174#L1">DynamicMap</a></h2>
+			<pre>type DynamicMap map[<a href="/pkg/builtin/#string">string</a>]interface{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEmptyMap">func <a href="/src/target/DynamicMap.go?s=218:248#L4">NewEmptyMap</a></h3>
+				<pre>func NewEmptyMap() *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMapAndSet">func <a href="/src/target/DynamicMap.go?s=519:571#L18">NewMapAndSet</a></h3>
+				<pre>func NewMapAndSet(params ...interface{}) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMapFromJson">func <a href="/src/target/DynamicMap.go?s=402:446#L13">NewMapFromJson</a></h3>
+				<pre>func NewMapFromJson(json <a href="/pkg/builtin/#string">string</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMapOf">func <a href="/src/target/DynamicMap.go?s=284:328#L8">NewMapOf</a></h3>
+				<pre>func NewMapOf(value interface{}) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewMapWithDefaults">func <a href="/src/target/DynamicMap.go?s=643:715#L24">NewMapWithDefaults</a></h3>
+				<pre>func NewMapWithDefaults(m *<a href="#DynamicMap">DynamicMap</a>, defaults *<a href="#DynamicMap">DynamicMap</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DynamicMap.AssignTo">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=6960:7008#L245">AssignTo</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) AssignTo(value interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Get">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=842:891#L31">Get</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Get(prop <a href="/pkg/builtin/#string">string</a>) interface{}</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetBoolean">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2575:2624#L94">GetBoolean</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetBoolean(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetBooleanWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2691:2770#L98">GetBooleanWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetBooleanWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/builtin/#bool">bool</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetDate">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=4236:4287#L142">GetDate</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetDate(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetDateWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=4351:4437#L146">GetDateWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetDateWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>) <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetFloat">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3816:3866#L130">GetFloat</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetFloat(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetFloatWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3931:4014#L134">GetFloatWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetFloatWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/builtin/#float64">float64</a>) <a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetInteger">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2994:3042#L106">GetInteger</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetInteger(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetIntegerWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3109:3186#L110">GetIntegerWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetIntegerWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetLong">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3406:3453#L118">GetLong</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetLong(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetLongWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3517:3595#L122">GetLongWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetLongWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/builtin/#int64">int64</a>) <a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetMap">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=1684:1736#L66">GetMap</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetMap(prop <a href="/pkg/builtin/#string">string</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetMapWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=1834:1923#L72">GetMapWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetMapWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue *<a href="#DynamicMap">DynamicMap</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableBoolean">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2442:2500#L90">GetNullableBoolean</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableBoolean(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableDate">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=4104:4164#L138">GetNullableDate</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableDate(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableFloat">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3684:3743#L126">GetNullableFloat</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableFloat(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/builtin/#float64">float64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableInteger">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2862:2919#L102">GetNullableInteger</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableInteger(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableLong">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=3278:3334#L114">GetNullableLong</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableLong(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableMap">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=1420:1480#L56">GetNullableMap</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableMap(prop <a href="/pkg/builtin/#string">string</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetNullableString">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2020:2079#L78">GetNullableString</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetNullableString(prop <a href="/pkg/builtin/#string">string</a>) *<a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetString">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2153:2203#L82">GetString</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetString(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.GetStringWithDefault">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=2269:2351#L86">GetStringWithDefault</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) GetStringWithDefault(prop <a href="/pkg/builtin/#string">string</a>, defaultValue <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Has">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=1253:1295#L48">Has</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Has(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.HasNot">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=1335:1380#L52">HasNot</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) HasNot(prop <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Merge">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=5780:5848#L201">Merge</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Merge(other *<a href="#DynamicMap">DynamicMap</a>, deep <a href="/pkg/builtin/#bool">bool</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.MergeDeep">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=6577:6638#L231">MergeDeep</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) MergeDeep(other *<a href="#DynamicMap">DynamicMap</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Omit">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=7763:7817#L277">Omit</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Omit(props ...<a href="/pkg/builtin/#string">string</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Pick">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=7535:7589#L265">Pick</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Pick(props ...<a href="/pkg/builtin/#string">string</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Remove">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=5552:5592#L189">Remove</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Remove(prop <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.RemoveAll">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=5623:5670#L193">RemoveAll</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) RemoveAll(props ...<a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.Set">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=4559:4615#L152">Set</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) Set(prop <a href="/pkg/builtin/#string">string</a>, value interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.SetAll">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=5469:5519#L185">SetAll</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) SetAll(params ...interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.SetArray">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=5243:5294#L177">SetArray</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) SetArray(params []interface{})</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.SetDefaults">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=6680:6757#L235">SetDefaults</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) SetDefaults(defaults *<a href="#DynamicMap">DynamicMap</a>, deep <a href="/pkg/builtin/#bool">bool</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DynamicMap.SetDefaultsDeep">func (*DynamicMap) <a href="/src/target/DynamicMap.go?s=6802:6872#L239">SetDefaultsDeep</a></h3>
+				<pre>func (c *<a href="#DynamicMap">DynamicMap</a>) SetDefaultsDeep(defaults *<a href="#DynamicMap">DynamicMap</a>) *<a href="#DynamicMap">DynamicMap</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FilterParams">type <a href="/src/target/FilterParams.go?s=19:47#L1">FilterParams</a></h2>
+			<pre>type FilterParams <a href="#DynamicMap">DynamicMap</a></pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEmptyFilterParams">func <a href="/src/target/FilterParams.go?s=51:92#L1">NewEmptyFilterParams</a></h3>
+				<pre>func NewEmptyFilterParams() *<a href="#FilterParams">FilterParams</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFilterParamsAndSet">func <a href="/src/target/FilterParams.go?s=253:316#L3">NewFilterParamsAndSet</a></h3>
+				<pre>func NewFilterParamsAndSet(params ...interface{}) *<a href="#FilterParams">FilterParams</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFilterParamsFromJson">func <a href="/src/target/FilterParams.go?s=405:460#L9">NewFilterParamsFromJson</a></h3>
+				<pre>func NewFilterParamsFromJson(json <a href="/pkg/builtin/#string">string</a>) *<a href="#FilterParams">FilterParams</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewFilterParamsOf">func <a href="/src/target/FilterParams.go?s=144:199#L1">NewFilterParamsOf</a></h3>
+				<pre>func NewFilterParamsOf(value interface{}) *<a href="#FilterParams">FilterParams</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="IAddon">type <a href="/src/target/IAddon.go?s=19:60#L1">IAddon</a></h2>
+			<pre>type IAddon interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ICache">type <a href="/src/target/ICache.go?s=19:217#L1">ICache</a></h2>
+			<pre>type ICache interface {
+    <a href="#IComponent">IComponent</a>
+
+    Get(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)
+    Set(key <a href="/pkg/builtin/#string">string</a>, value interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)
+    Unset(key <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#error">error</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IClient">type <a href="/src/target/IClient.go?s=19:61#L1">IClient</a></h2>
+			<pre>type IClient interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IComponent">type <a href="/src/target/IComponent.go?s=19:120#L1">IComponent</a></h2>
+			<pre>type IComponent interface {
+    Init(refs *<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a>
+    Open() <a href="/pkg/builtin/#error">error</a>
+    Close() <a href="/pkg/builtin/#error">error</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IConfig">type <a href="/src/target/IConfig.go?s=19:100#L1">IConfig</a></h2>
+			<pre>type IConfig interface {
+    <a href="#IComponent">IComponent</a>
+
+    Read() (*<a href="#DynamicMap">DynamicMap</a>, <a href="/pkg/builtin/#error">error</a>)
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IController">type <a href="/src/target/IController.go?s=19:65#L1">IController</a></h2>
+			<pre>type IController interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ICounters">type <a href="/src/target/ICounters.go?s=200:646#L3">ICounters</a></h2>
+			<pre>type ICounters interface {
+    <a href="#IComponent">IComponent</a>
+
+    Reset(name <a href="/pkg/builtin/#string">string</a>)
+    ResetAll()
+    Dump() <a href="/pkg/builtin/#error">error</a>
+
+    GetAll() []*<a href="#Counter">Counter</a>
+    Get(name <a href="/pkg/builtin/#string">string</a>, typ <a href="/pkg/builtin/#int">int</a>) *<a href="#Counter">Counter</a>
+
+    BeginTiming(name <a href="/pkg/builtin/#string">string</a>) *<a href="#Timing">Timing</a>
+    Stats(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)
+    Last(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#float32">float32</a>)
+    TimestampNow(name <a href="/pkg/builtin/#string">string</a>)
+    Timestamp(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/time/">time</a>.<a href="/pkg/time/#Time">Time</a>)
+    IncrementOne(name <a href="/pkg/builtin/#string">string</a>)
+    Increment(name <a href="/pkg/builtin/#string">string</a>, value <a href="/pkg/builtin/#int">int</a>)
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IDataAccess">type <a href="/src/target/IDataAccess.go?s=19:65#L1">IDataAccess</a></h2>
+			<pre>type IDataAccess interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IDiscovery">type <a href="/src/target/IDiscovery.go?s=19:111#L1">IDiscovery</a></h2>
+			<pre>type IDiscovery interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IInterceptor">type <a href="/src/target/IInterceptor.go?s=19:67#L1">IInterceptor</a></h2>
+			<pre>type IInterceptor interface {
+    <a href="#IController">IController</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ILog">type <a href="/src/target/ILog.go?s=191:496#L3">ILog</a></h2>
+			<pre>type ILog interface {
+    <a href="#IComponent">IComponent</a>
+
+    Level() <a href="/pkg/builtin/#int">int</a>
+    SetLevel(value <a href="/pkg/builtin/#int">int</a>)
+
+    Fatal(message ...interface{})
+    Error(message ...interface{})
+    Warn(message ...interface{})
+    Info(message ...interface{})
+    Debug(message ...interface{})
+    Trace(message ...interface{})
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IService">type <a href="/src/target/IService.go?s=19:62#L1">IService</a></h2>
+			<pre>type IService interface {
+    <a href="#IComponent">IComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ITimingSetter">type <a href="/src/target/Timing.go?s=32:105#L1">ITimingSetter</a></h2>
+			<pre>type ITimingSetter interface {
+    SetTiming(name <a href="/pkg/builtin/#string">string</a>, elapsed <a href="/pkg/builtin/#float32">float32</a>)
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MicroserviceError">type <a href="/src/target/MicroserviceError.go?s=19:375#L1">MicroserviceError</a></h2>
+			<pre>type MicroserviceError struct {
+    Component   <a href="/pkg/builtin/#string">string</a>        `json:&#34;component&#34;`
+    Code        <a href="/pkg/builtin/#string">string</a>        `json:&#34;code&#34;`
+    Message     <a href="/pkg/builtin/#string">string</a>        `json:&#34;message&#34;`
+    Status      <a href="/pkg/builtin/#int">int</a>           `json:&#34;status&#34;`
+    Details     []interface{} `json:&#34;details&#34;`
+    Correlation <a href="/pkg/builtin/#string">string</a>        `json:&#34;correlation&#34;`
+    Cause       <a href="/pkg/builtin/#error">error</a>         `json:&#34;cause&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBadRequest">func <a href="/src/target/MicroserviceError.go?s=3640:3693#L99">NewBadRequest</a></h3>
+				<pre>func NewBadRequest(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewBuildError">func <a href="/src/target/MicroserviceError.go?s=1913:1966#L59">NewBuildError</a></h3>
+				<pre>func NewBuildError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewCallError">func <a href="/src/target/MicroserviceError.go?s=2965:3030#L84">NewCallError</a></h3>
+				<pre>func NewCallError(message <a href="/pkg/builtin/#string">string</a>, cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewCloseError">func <a href="/src/target/MicroserviceError.go?s=2738:2804#L79">NewCloseError</a></h3>
+				<pre>func NewCloseError(message <a href="/pkg/builtin/#string">string</a>, cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewConfigError">func <a href="/src/target/MicroserviceError.go?s=2110:2164#L64">NewConfigError</a></h3>
+				<pre>func NewConfigError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewConflict">func <a href="/src/target/MicroserviceError.go?s=4245:4296#L114">NewConflict</a></h3>
+				<pre>func NewConflict(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewError">func <a href="/src/target/MicroserviceError.go?s=1511:1559#L49">NewError</a></h3>
+				<pre>func NewError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewInternalError">func <a href="/src/target/MicroserviceError.go?s=1708:1764#L54">NewInternalError</a></h3>
+				<pre>func NewInternalError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewNotFound">func <a href="/src/target/MicroserviceError.go?s=4044:4095#L109">NewNotFound</a></h3>
+				<pre>func NewNotFound(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewOpenError">func <a href="/src/target/MicroserviceError.go?s=2514:2579#L74">NewOpenError</a></h3>
+				<pre>func NewOpenError(message <a href="/pkg/builtin/#string">string</a>, cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewReadError">func <a href="/src/target/MicroserviceError.go?s=3189:3254#L89">NewReadError</a></h3>
+				<pre>func NewReadError(message <a href="/pkg/builtin/#string">string</a>, cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewStateError">func <a href="/src/target/MicroserviceError.go?s=2316:2369#L69">NewStateError</a></h3>
+				<pre>func NewStateError(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewUnauthorized">func <a href="/src/target/MicroserviceError.go?s=3836:3891#L104">NewUnauthorized</a></h3>
+				<pre>func NewUnauthorized(message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewWriteError">func <a href="/src/target/MicroserviceError.go?s=3413:3479#L94">NewWriteError</a></h3>
+				<pre>func NewWriteError(message <a href="/pkg/builtin/#string">string</a>, cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="WrapError">func <a href="/src/target/MicroserviceError.go?s=1187:1231#L37">WrapError</a></h3>
+				<pre>func WrapError(err <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="WrapErrorWithMessage">func <a href="/src/target/MicroserviceError.go?s=1283:1354#L41">WrapErrorWithMessage</a></h3>
+				<pre>func WrapErrorWithMessage(err <a href="/pkg/builtin/#error">error</a>, message <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="MicroserviceError.Error">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=379:421#L3">Error</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) Error() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.ForComponent">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=452:529#L7">ForComponent</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) ForComponent(component <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.WithCause">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=936:1005#L27">WithCause</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) WithCause(cause <a href="/pkg/builtin/#error">error</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.WithCode">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=581:649#L12">WithCode</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) WithCode(code <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.WithCorrelation">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=1049:1131#L32">WithCorrelation</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) WithCorrelation(correlation <a href="/pkg/builtin/#string">string</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.WithDetails">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=806:888#L22">WithDetails</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) WithDetails(details ...interface{}) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MicroserviceError.WithStatus">func (*MicroserviceError) <a href="/src/target/MicroserviceError.go?s=691:760#L17">WithStatus</a></h3>
+				<pre>func (e *<a href="#MicroserviceError">MicroserviceError</a>) WithStatus(status <a href="/pkg/builtin/#int">int</a>) *<a href="#MicroserviceError">MicroserviceError</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PagingParams">type <a href="/src/target/PagingParams.go?s=94:170#L1">PagingParams</a></h2>
+			<pre>type PagingParams struct {
+    Skip   *<a href="/pkg/builtin/#int">int</a>
+    Take   *<a href="/pkg/builtin/#int">int</a>
+    Paging <a href="/pkg/builtin/#bool">bool</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEmptyPagingParams">func <a href="/src/target/PagingParams.go?s=174:215#L3">NewEmptyPagingParams</a></h3>
+				<pre>func NewEmptyPagingParams() *<a href="#PagingParams">PagingParams</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewPagingParams">func <a href="/src/target/PagingParams.go?s=289:355#L7">NewPagingParams</a></h3>
+				<pre>func NewPagingParams(skip, take, paging interface{}) *<a href="#PagingParams">PagingParams</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewPagingParamsFromMap">func <a href="/src/target/PagingParams.go?s=589:649#L17">NewPagingParamsFromMap</a></h3>
+				<pre>func NewPagingParamsFromMap(value *<a href="#DynamicMap">DynamicMap</a>) *<a href="#PagingParams">PagingParams</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="PagingParams.GetSkip">func (*PagingParams) <a href="/src/target/PagingParams.go?s=865:912#L27">GetSkip</a></h3>
+				<pre>func (c *<a href="#PagingParams">PagingParams</a>) GetSkip(minSkip <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PagingParams.GetTake">func (*PagingParams) <a href="/src/target/PagingParams.go?s=1027:1074#L33">GetTake</a></h3>
+				<pre>func (c *<a href="#PagingParams">PagingParams</a>) GetTake(maxTake <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#int">int</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="References">type <a href="/src/target/References.go?s=19:353#L1">References</a></h2>
+			<pre>type References struct {
+    Config   <a href="#IConfig">IConfig</a>
+    Log      <a href="#ILog">ILog</a>
+    Counters <a href="#ICounters">ICounters</a>
+    Cache    <a href="#ICache">ICache</a>
+    DB       <a href="#IDataAccess">IDataAccess</a>
+    Deps     map[<a href="/pkg/builtin/#string">string</a>]<a href="#IClient">IClient</a>
+    Ctrl     <a href="#IController">IController</a>
+    Ints     []<a href="#IInterceptor">IInterceptor</a>
+    Logic    <a href="#IController">IController</a>
+    API      []<a href="#IService">IService</a>
+    Addons   []<a href="#IAddon">IAddon</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewReferences">func <a href="/src/target/References.go?s=357:389#L7">NewReferences</a></h3>
+				<pre>func NewReferences() *<a href="#References">References</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="References.GetComponents">func (*References) <a href="/src/target/References.go?s=835:887#L28">GetComponents</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) GetComponents() []<a href="#IComponent">IComponent</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.GetDep">func (*References) <a href="/src/target/References.go?s=703:754#L23">GetDep</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) GetDep(name <a href="/pkg/builtin/#string">string</a>) <a href="#IClient">IClient</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithAPI">func (*References) <a href="/src/target/References.go?s=3021:3081#L111">WithAPI</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithAPI(api ...<a href="#IService">IService</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithAddons">func (*References) <a href="/src/target/References.go?s=3127:3191#L116">WithAddons</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithAddons(addons ...<a href="#IAddon">IAddon</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithCache">func (*References) <a href="/src/target/References.go?s=2033:2092#L68">WithCache</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithCache(cache <a href="#ICache">ICache</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithConfig">func (*References) <a href="/src/target/References.go?s=1696:1758#L53">WithConfig</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithConfig(config <a href="#IConfig">IConfig</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithCounters">func (*References) <a href="/src/target/References.go?s=1909:1977#L63">WithCounters</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithCounters(counters <a href="#ICounters">ICounters</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithCtrl">func (*References) <a href="/src/target/References.go?s=2683:2745#L96">WithCtrl</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithCtrl(ctrl <a href="#IController">IController</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithDB">func (*References) <a href="/src/target/References.go?s=2142:2200#L73">WithDB</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithDB(db <a href="#IDataAccess">IDataAccess</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithDep">func (*References) <a href="/src/target/References.go?s=2244:2313#L78">WithDep</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithDep(name <a href="/pkg/builtin/#string">string</a>, dep <a href="#IClient">IClient</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithDeps">func (*References) <a href="/src/target/References.go?s=2366:2433#L83">WithDeps</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithDeps(params ...interface{}) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithInts">func (*References) <a href="/src/target/References.go?s=2793:2859#L101">WithInts</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithInts(ints ...<a href="#IInterceptor">IInterceptor</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithLog">func (*References) <a href="/src/target/References.go?s=1810:1863#L58">WithLog</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithLog(log <a href="#ILog">ILog</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="References.WithLogic">func (*References) <a href="/src/target/References.go?s=2907:2971#L106">WithLogic</a></h3>
+				<pre>func (refs *<a href="#References">References</a>) WithLogic(logic <a href="#IController">IController</a>) *<a href="#References">References</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Timing">type <a href="/src/target/Timing.go?s=107:184#L1">Timing</a></h2>
+			<pre>type Timing struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="EmptyTiming">func <a href="/src/target/Timing.go?s=186:212#L5">EmptyTiming</a></h3>
+				<pre>func EmptyTiming() *<a href="#Timing">Timing</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewTiming">func <a href="/src/target/Timing.go?s=257:314#L9">NewTiming</a></h3>
+				<pre>func NewTiming(setter <a href="#ITimingSetter">ITimingSetter</a>, name <a href="/pkg/builtin/#string">string</a>) *<a href="#Timing">Timing</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="Timing.EndTiming">func (*Timing) <a href="/src/target/Timing.go?s=393:421#L16">EndTiming</a></h3>
+				<pre>func (t *<a href="#Timing">Timing</a>) EndTiming()</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="..">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="addons/">addons</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="api/">api</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="build/">build</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="cache/">cache</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="config/">config</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="counters/">counters</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="db/">db</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="deps/">deps</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="discovery/">discovery</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="doc/">doc</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="ints/">ints</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="log/">log</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="logic/">logic</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="run/">run</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="test/">test</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="util/">util</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+

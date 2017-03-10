@@ -1,0 +1,296 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/deps"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractClient">type AbstractClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractClient">func NewAbstractClient(id string, config *runtime.DynamicMap) *AbstractClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractClient.Instrument">func (c *AbstractClient) Instrument(name string) *runtime.Timing</a></dd>
+				
+			
+				
+				<dd><a href="#RestClient">type RestClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewRestClient">func NewRestClient(id string, config *runtime.DynamicMap) *RestClient</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Call">func (c *RestClient) Call(method string, route string, input interface{}, output interface{}) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Client">func (c *RestClient) Client() *http.Client</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Close">func (c *RestClient) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.GetPagingAndFilterParams">func (c *RestClient) GetPagingAndFilterParams(filter *runtime.FilterParams, paging *runtime.PagingParams) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Init">func (c *RestClient) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Open">func (c *RestClient) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.QueryParams">func (c *RestClient) QueryParams(params map[string]string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestClient.Url">func (c *RestClient) Url() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/deps/AbstractClient.go">AbstractClient.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/deps/RestClient.go">RestClient.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractClient">type <a href="/src/target/AbstractClient.go?s=86:148#L1">AbstractClient</a></h2>
+			<pre>type AbstractClient struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractClient">func <a href="/src/target/AbstractClient.go?s=152:229#L1">NewAbstractClient</a></h3>
+				<pre>func NewAbstractClient(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractClient">AbstractClient</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractClient.Instrument">func (*AbstractClient) <a href="/src/target/AbstractClient.go?s=335:399#L5">Instrument</a></h3>
+				<pre>func (c *<a href="#AbstractClient">AbstractClient</a>) Instrument(name <a href="/pkg/builtin/#string">string</a>) *runtime.<a href="#Timing">Timing</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RestClient">type <a href="/src/target/RestClient.go?s=233:321#L3">RestClient</a></h2>
+			<pre>type RestClient struct {
+    <a href="#AbstractClient">AbstractClient</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRestClient">func <a href="/src/target/RestClient.go?s=325:394#L9">NewRestClient</a></h3>
+				<pre>func NewRestClient(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#RestClient">RestClient</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="RestClient.Call">func (*RestClient) <a href="/src/target/RestClient.go?s=3161:3276#L111">Call</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Call(method <a href="/pkg/builtin/#string">string</a>, route <a href="/pkg/builtin/#string">string</a>, input interface{}, output interface{}) (interface{}, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.Client">func (*RestClient) <a href="/src/target/RestClient.go?s=767:809#L24">Client</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Client() *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Client">Client</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.Close">func (*RestClient) <a href="/src/target/RestClient.go?s=2046:2080#L65">Close</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.GetPagingAndFilterParams">func (*RestClient) <a href="/src/target/RestClient.go?s=2479:2591#L87">GetPagingAndFilterParams</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) GetPagingAndFilterParams(filter *runtime.<a href="#FilterParams">FilterParams</a>, paging *runtime.<a href="#PagingParams">PagingParams</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.Init">func (*RestClient) <a href="/src/target/RestClient.go?s=839:896#L28">Init</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.Open">func (*RestClient) <a href="/src/target/RestClient.go?s=1665:1698#L53">Open</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.QueryParams">func (*RestClient) <a href="/src/target/RestClient.go?s=2211:2277#L74">QueryParams</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) QueryParams(params map[<a href="/pkg/builtin/#string">string</a>]<a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestClient.Url">func (*RestClient) <a href="/src/target/RestClient.go?s=707:740#L20">Url</a></h3>
+				<pre>func (c *<a href="#RestClient">RestClient</a>) Url() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

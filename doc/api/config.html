@@ -1,0 +1,299 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/config"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="#ReadConfig">func ReadConfig(path string) (*runtime.DynamicMap, error)</a></dd>
+			
+			
+				
+				<dd><a href="#AbstractConfig">type AbstractConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractConfig">func NewAbstractConfig(id string, config *runtime.DynamicMap) *AbstractConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="#DirectConfig">type DirectConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewDirectConfig">func NewDirectConfig(config *runtime.DynamicMap) *DirectConfig</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DirectConfig.Read">func (c *DirectConfig) Read() (*runtime.DynamicMap, error)</a></dd>
+				
+			
+				
+				<dd><a href="#JsonConfig">type JsonConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewJsonConfig">func NewJsonConfig(config *runtime.DynamicMap) *JsonConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewJsonConfigFromFile">func NewJsonConfigFromFile(path string) *JsonConfig</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#JsonConfig.Init">func (c *JsonConfig) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#JsonConfig.Open">func (c *JsonConfig) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#JsonConfig.Read">func (c *JsonConfig) Read() (*runtime.DynamicMap, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/config/AbstractConfig.go">AbstractConfig.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/config/DirectConfig.go">DirectConfig.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/config/JsonConfig.go">JsonConfig.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="ReadConfig">func <a href="/src/target/JsonConfig.go?s=1128:1185#L36">ReadConfig</a></h2>
+			<pre>func ReadConfig(path <a href="/pkg/builtin/#string">string</a>) (*runtime.<a href="#DynamicMap">DynamicMap</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AbstractConfig">type <a href="/src/target/AbstractConfig.go?s=88:150#L1">AbstractConfig</a></h2>
+			<pre>type AbstractConfig struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractConfig">func <a href="/src/target/AbstractConfig.go?s=154:231#L1">NewAbstractConfig</a></h3>
+				<pre>func NewAbstractConfig(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractConfig">AbstractConfig</a></pre>
+				
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="DirectConfig">type <a href="/src/target/DirectConfig.go?s=88:137#L1">DirectConfig</a></h2>
+			<pre>type DirectConfig struct {
+    <a href="#AbstractConfig">AbstractConfig</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDirectConfig">func <a href="/src/target/DirectConfig.go?s=141:203#L1">NewDirectConfig</a></h3>
+				<pre>func NewDirectConfig(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#DirectConfig">DirectConfig</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="DirectConfig.Read">func (*DirectConfig) <a href="/src/target/DirectConfig.go?s=301:359#L5">Read</a></h3>
+				<pre>func (c *<a href="#DirectConfig">DirectConfig</a>) Read() (*runtime.<a href="#DynamicMap">DynamicMap</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="JsonConfig">type <a href="/src/target/JsonConfig.go?s=136:183#L1">JsonConfig</a></h2>
+			<pre>type JsonConfig struct {
+    <a href="#AbstractConfig">AbstractConfig</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewJsonConfig">func <a href="/src/target/JsonConfig.go?s=187:245#L4">NewJsonConfig</a></h3>
+				<pre>func NewJsonConfig(config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#JsonConfig">JsonConfig</a></pre>
+				
+				
+				
+			
+				
+				<h3 id="NewJsonConfigFromFile">func <a href="/src/target/JsonConfig.go?s=339:390#L8">NewJsonConfigFromFile</a></h3>
+				<pre>func NewJsonConfigFromFile(path <a href="/pkg/builtin/#string">string</a>) *<a href="#JsonConfig">JsonConfig</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="JsonConfig.Init">func (*JsonConfig) <a href="/src/target/JsonConfig.go?s=485:542#L13">Init</a></h3>
+				<pre>func (c *<a href="#JsonConfig">JsonConfig</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="JsonConfig.Open">func (*JsonConfig) <a href="/src/target/JsonConfig.go?s=716:749#L21">Open</a></h3>
+				<pre>func (c *<a href="#JsonConfig">JsonConfig</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="JsonConfig.Read">func (*JsonConfig) <a href="/src/target/JsonConfig.go?s=992:1048#L31">Read</a></h3>
+				<pre>func (c *<a href="#JsonConfig">JsonConfig</a>) Read() (*runtime.<a href="#DynamicMap">DynamicMap</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+

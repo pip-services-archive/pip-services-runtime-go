@@ -1,0 +1,396 @@
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/pip-services/pip-services-runtime-go/api"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="#AbstractService">type AbstractService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewAbstractService">func NewAbstractService(id string, config *runtime.DynamicMap) *AbstractService</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractService.Init">func (c *AbstractService) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#AbstractService.Logic">func (c *AbstractService) Logic() runtime.IController</a></dd>
+				
+			
+				
+				<dd><a href="#RestService">type RestService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewRestService">func NewRestService(id string, config *runtime.DynamicMap) *RestService</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Close">func (c *RestService) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.GetFilterParams">func (c *RestService) GetFilterParams(req *http.Request) *runtime.FilterParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.GetInputData">func (c *RestService) GetInputData(req *http.Request, data interface{}) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.GetPagingParams">func (c *RestService) GetPagingParams(req *http.Request) *runtime.PagingParams</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.GetQueryParam">func (c *RestService) GetQueryParam(req *http.Request, name string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.GetRouteParam">func (c *RestService) GetRouteParam(req *http.Request, name string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Init">func (c *RestService) Init(refs *runtime.References) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Open">func (c *RestService) Open() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Register">func (c *RestService) Register(method string, route string, handler func(w http.ResponseWriter, r *http.Request))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Router">func (c *RestService) Router() *mux.Router</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.SendCreatedResult">func (c *RestService) SendCreatedResult(w http.ResponseWriter, result interface{}, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.SendDeletedResult">func (c *RestService) SendDeletedResult(w http.ResponseWriter, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.SendError">func (c *RestService) SendError(w http.ResponseWriter, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.SendResult">func (c *RestService) SendResult(w http.ResponseWriter, result interface{}, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.Server">func (c *RestService) Server() *http.Server</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#RestService.SetRegistrations">func (c *RestService) SetRegistrations(registrations func())</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/api/AbstractService.go">AbstractService.go</a>
+			
+				<a href="/src/github.com/pip-services/pip-services-runtime-go/api/RestService.go">RestService.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AbstractService">type <a href="/src/target/AbstractService.go?s=85:185#L1">AbstractService</a></h2>
+			<pre>type AbstractService struct {
+    runtime.<a href="#AbstractComponent">AbstractComponent</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAbstractService">func <a href="/src/target/AbstractService.go?s=189:268#L3">NewAbstractService</a></h3>
+				<pre>func NewAbstractService(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#AbstractService">AbstractService</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="AbstractService.Init">func (*AbstractService) <a href="/src/target/AbstractService.go?s=457:519#L11">Init</a></h3>
+				<pre>func (c *<a href="#AbstractService">AbstractService</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="AbstractService.Logic">func (*AbstractService) <a href="/src/target/AbstractService.go?s=375:428#L7">Logic</a></h3>
+				<pre>func (c *<a href="#AbstractService">AbstractService</a>) Logic() runtime.<a href="#IController">IController</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RestService">type <a href="/src/target/RestService.go?s=277:434#L5">RestService</a></h2>
+			<pre>type RestService struct {
+    <a href="#AbstractService">AbstractService</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRestService">func <a href="/src/target/RestService.go?s=438:509#L14">NewRestService</a></h3>
+				<pre>func NewRestService(id <a href="/pkg/builtin/#string">string</a>, config *runtime.<a href="#DynamicMap">DynamicMap</a>) *<a href="#RestService">RestService</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="RestService.Close">func (*RestService) <a href="/src/target/RestService.go?s=3321:3356#L98">Close</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Close() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.GetFilterParams">func (*RestService) <a href="/src/target/RestService.go?s=4756:4834#L150">GetFilterParams</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) GetFilterParams(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>) *runtime.<a href="#FilterParams">FilterParams</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.GetInputData">func (*RestService) <a href="/src/target/RestService.go?s=5507:5584#L174">GetInputData</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) GetInputData(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, data interface{}) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.GetPagingParams">func (*RestService) <a href="/src/target/RestService.go?s=4264:4342#L135">GetPagingParams</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) GetPagingParams(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>) *runtime.<a href="#PagingParams">PagingParams</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.GetQueryParam">func (*RestService) <a href="/src/target/RestService.go?s=4143:4217#L131">GetQueryParam</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) GetQueryParam(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, name <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.GetRouteParam">func (*RestService) <a href="/src/target/RestService.go?s=4028:4102#L127">GetRouteParam</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) GetRouteParam(req *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>, name <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.Init">func (*RestService) <a href="/src/target/RestService.go?s=1063:1121#L32">Init</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Init(refs *runtime.<a href="#References">References</a>) <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.Open">func (*RestService) <a href="/src/target/RestService.go?s=1745:1779#L54">Open</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Open() <a href="/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.Register">func (*RestService) <a href="/src/target/RestService.go?s=3811:3924#L122">Register</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Register(method <a href="/pkg/builtin/#string">string</a>, route <a href="/pkg/builtin/#string">string</a>, handler func(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Request">Request</a>))</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.Router">func (*RestService) <a href="/src/target/RestService.go?s=3739:3781#L118">Router</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Router() *<a href="/pkg/github.com/gorilla/mux/">mux</a>.<a href="/pkg/github.com/gorilla/mux/#Router">Router</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.SendCreatedResult">func (*RestService) <a href="/src/target/RestService.go?s=6685:6778#L212">SendCreatedResult</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) SendCreatedResult(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, result interface{}, err <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.SendDeletedResult">func (*RestService) <a href="/src/target/RestService.go?s=7116:7189#L227">SendDeletedResult</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) SendDeletedResult(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, err <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.SendError">func (*RestService) <a href="/src/target/RestService.go?s=5854:5919#L185">SendError</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) SendError(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, err <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.SendResult">func (*RestService) <a href="/src/target/RestService.go?s=6222:6308#L197">SendResult</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) SendResult(w <a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#ResponseWriter">ResponseWriter</a>, result interface{}, err <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.Server">func (*RestService) <a href="/src/target/RestService.go?s=3666:3709#L114">Server</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) Server() *<a href="/pkg/net/http/">http</a>.<a href="/pkg/net/http/#Server">Server</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="RestService.SetRegistrations">func (*RestService) <a href="/src/target/RestService.go?s=957:1017#L28">SetRegistrations</a></h3>
+				<pre>func (c *<a href="#RestService">RestService</a>) SetRegistrations(registrations func())</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
